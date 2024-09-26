@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1ªs Jornadas Nacionais de Medicina Ocupacional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "custom-blue": "#0047AB",
+              "custom-red": "#DC143C",
+            },
+            fontFamily: {
+              poppins: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      }
+    </script>
+    <style>
+      .gradient-header {
+        background: linear-gradient(135deg, #0047ab, #000851);
+      }
+      .sponsor-image-container {
+        aspect-ratio: 16 / 9;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .sponsor-image {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+      }
+      .social-icon {
+        transition: transform 0.3s ease;
+      }
+      .social-icon:hover {
+        transform: scale(1.2);
+      }
+      .countdown-placeholder {
+        width: 100%;
+        max-width: 600px; /* Adjust based on your design */
+        height: 100px; /* Adjust based on your design */
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 0.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .countdown-content {
+        display: none;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <div
+      class="bg-cover bg-center min-h-screen"
+      style="background-image: url('api/bg.jpeg')"
+    >
+      <div class="bg-black bg-opacity-50 min-h-screen flex flex-col">
+        <header class="gradient-header text-white shadow-lg">
+          <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+              <h1
+                class="text-3xl md:text-4xl font-bold leading-tight text-center md:text-left mb-4 md:mb-0"
+              >
+                1ªs Jornadas Nacionais de Medicina Ocupacional
+              </h1>
+              <nav class="hidden lg:flex space-x-2 md:space-x-4">
+                <a
+                  href="https://forms.gle/1NjbJt2PL1oriSj67"
+                  target="_blank"
+                  class="bg-custom-red hover:bg-white hover:text-custom-red text-white font-bold py-2 px-4 rounded-full transition-colors"
+                  >Inscreva-se</a
+                >
+              </nav>
+            </div>
+          </div>
+        </header>
+
+        <main class="container mx-auto px-4 py-8 flex-grow">
+          <section class="mb-12 text-center" data-aos="fade-up">
+            <h2 class="text-3xl font-semibold mb-4 text-white">
+              Contagem regressiva para o evento
+            </h2>
+            <div
+              id="countdown"
+              class="text-4xl md:text-5xl font-bold text-custom-red bg-white bg-opacity-90 inline-block px-6 py-4 rounded-lg shadow-lg"
+            ></div>
+          </section>
+
+          <section
+            id="info"
+            class="mb-12 bg-white bg-opacity-90 p-6 rounded-lg shadow-lg"
+            data-aos="fade-up"
+          >
+            <h2
+              class="text-3xl font-semibold mb-6 text-custom-blue text-center"
+            >
+              Informações do Evento
+            </h2>
+            <div class="grid md:grid-cols-4 gap-6">
+              <div
+                class="text-center"
+                data-aos="fade-right"
+                data-aos-delay="100"
+              >
+                <div class="text-4xl text-custom-red mb-2">
+                  <i class="far fa-calendar-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Data</h3>
+                <p class="text-lg">24 de outubro de 2024</p>
+              </div>
+              <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+                <div class="text-4xl text-custom-red mb-2">
+                  <i class="far fa-clock"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Hora</h3>
+                <p class="text-lg">08:00</p>
+              </div>
+              <div
+                class="text-center"
+                data-aos="fade-left"
+                data-aos-delay="300"
+              >
+                <div class="text-4xl text-custom-red mb-2">
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Local</h3>
+                <p class="text-lg">Centro Pastoral de Benguela</p>
+                <a
+                  href="https://maps.app.goo.gl/pYVbgtDqx5mmAMm8A"
+                  target="_blank"
+                  class="inline-block mt-2 text-custom-blue hover:text-custom-red transition-colors"
+                >
+                  <i class="fas fa-directions mr-1"></i>Como chegar
+                </a>
+              </div>
+              <div
+                class="text-center"
+                data-aos="fade-left"
+                data-aos-delay="400"
+              >
+                <div class="text-4xl text-custom-red mb-2">
+                  <i class="fas fa-ticket-alt"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">Preço</h3>
+                <p class="text-lg">2.500 kz</p>
+              </div>
+            </div>
+            <div class="mt-8 text-center">
+              <a
+                href="https://jornadasteste.my.canva.site"
+                class="inline-block bg-custom-blue hover:bg-custom-red text-white font-bold py-2 px-4 rounded-full transition-colors"
+                target="_blank"
+              >
+                Ver programa completo
+              </a>
+            </div>
+          </section>
+
+          <section
+            id="sponsors"
+            class="mb-12 bg-white bg-opacity-90 p-6 rounded-lg shadow-lg"
+            data-aos="fade-up"
+          >
+            <h2 class="text-2xl font-semibold mb-4 text-custom-blue">
+              Com o apoio de
+            </h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div
+                class="sponsor-image-container p-2 rounded border border-gray-200"
+                data-aos="zoom-in"
+                data-aos-delay="100"
+              >
+                <img
+                  src="api/benguela.png"
+                  alt="Sponsor 1"
+                  class="sponsor-image"
+                />
+              </div>
+              <div
+                class="sponsor-image-container p-2 rounded border border-gray-200"
+                data-aos="zoom-in"
+                data-aos-delay="200"
+              >
+                <img
+                  src="api/minsa.png"
+                  alt="Sponsor 2"
+                  class="sponsor-image"
+                />
+              </div>
+              <div
+                class="sponsor-image-container p-2 rounded border border-gray-200"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <img src="api/igt.png" alt="Sponsor 4" class="sponsor-image" />
+              </div>
+              <div
+                class="sponsor-image-container p-2 rounded border border-gray-200"
+                data-aos="zoom-in"
+                data-aos-delay="400"
+              >
+                <img
+                  src="api/arseg.png"
+                  alt="Sponsor 3"
+                  class="sponsor-image"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section id="registration" class="text-center" data-aos="fade-up">
+            <a
+              href="https://forms.gle/1NjbJt2PL1oriSj67"
+              target="_blank"
+              class="inline-block bg-custom-red hover:bg-white hover:text-custom-red text-white font-bold py-3 px-6 rounded-full text-xl transition-colors duration-300 ease-in-out transform hover:scale-105"
+            >
+              Inscreva-se Agora
+            </a>
+          </section>
+        </main>
+        <footer
+          class="bg-gradient-to-r from-custom-blue to-custom-red text-white py-6 mt-8"
+        >
+          <div class="container mx-auto px-4">
+            <div
+              class="flex flex-col md:flex-row justify-between items-center gap-1"
+            >
+              <div class="mb-4 md:mb-0">
+                <p>
+                  &copy; 2024 1ªs Jornadas Nacionais de Medicina Ocupacional.
+                  Todos os direitos reservados.
+                </p>
+              </div>
+
+              <div class="flex items-center">
+                <p class="mr-4">Siga-nos:</p>
+                <a
+                  href="https://www.instagram.com/centralab.angola/"
+                  target="_blank"
+                  class="text-white hover:text-gray-200 mx-2 social-icon"
+                >
+                  <i class="fab fa-instagram fa-2x"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/centralab-lda/"
+                  target="_blank"
+                  class="text-white hover:text-gray-200 mx-2 social-icon"
+                >
+                  <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+              </div>
+              <div class="bg-white p-1 rounded-lg">
+                <img
+                  src="api/logo.svg"
+                  alt="Organizer Logo"
+                  class="h-8 w-auto"
+                />
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100,
+      })
+      // Countdown timer
+      const countDownDate = new Date("Oct 24, 2024 08:00:00").getTime()
+
+      const x = setInterval(function () {
+        const now = new Date().getTime()
+        const distance = countDownDate - now
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        )
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60))
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000)
+
+        document.getElementById(
+          "countdown"
+        ).innerHTML = `<div class="grid grid-cols-4 gap-4">
+                    <div>${days}<br><span class="text-sm">dias</span></div>
+                    <div>${hours}<br><span class="text-sm">horas</span></div>
+                    <div>${minutes}<br><span class="text-sm">minutos</span></div>
+                    <div>${seconds}<br><span class="text-sm">segundos</span></div>
+                </div>`
+
+        if (distance < 0) {
+          clearInterval(x)
+          document.getElementById("countdown").innerHTML = "O EVENTO COMEÇOU!"
+        }
+      }, 1000)
+    </script>
+  </body>
+</html>
